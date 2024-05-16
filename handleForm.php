@@ -19,9 +19,21 @@ if(isset($_POST['submitBtn'])) {
 	header('Location: index.php');
 }
 
-?>
+require_once('dbConfig.php'); 
 
-<?php  
+require_once('functions.php'); 
+
+if(isset($_POST['submitBtn'])) { 
+
+	$title = $_POST['title']; 
+
+	$description = $_POST['description']; 
+
+	makeATask($conn, $title, $description); 
+
+	header('Location: index.php');
+}
+
 session_start();
 require_once('dbConfig.php');
 require_once('functions.php');
