@@ -15,8 +15,6 @@ if(isset($_POST['submitBtn'])) {
 	$_SESSION['firstName'] = $firstName;
 	$_SESSION['password'] = $password;
 
-
-	header('Location: login.php');
 }
 
 require_once('dbConfig.php'); 
