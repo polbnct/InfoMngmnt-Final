@@ -10,21 +10,6 @@ function makeATask($conn, $title, $description) {
 	$stmt->execute([$title, $description]);
 }
 
-function getAllTasks($conn) {
-
-	
-	$sql = "SELECT * FROM tasks";
-	
-	
-	$stmt = $conn->prepare($sql);
-	
-	
-	$stmt->execute();
-	
-	
-	return $stmt->fetchAll();
-}
-
 ?>
 
 <?php  
