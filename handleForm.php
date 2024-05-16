@@ -27,8 +27,6 @@ if(isset($_POST['submitBtn'])) {
 	$description = $_POST['description']; 
 
 	makeATask($conn, $title, $description); 
-
-	header('Location: login.php');
 }
 
 if (isset($_POST['regBtn'])) {
