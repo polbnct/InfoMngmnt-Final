@@ -1,6 +1,9 @@
 <?php 
 
 session_start();
+require_once('dbConfig.php'); 
+
+require_once('functions.php'); 
 
 
 if(isset($_POST['submitBtn'])) {
@@ -17,10 +20,6 @@ if(isset($_POST['submitBtn'])) {
 
 }
 
-require_once('dbConfig.php'); 
-
-require_once('functions.php'); 
-
 if(isset($_POST['submitBtn'])) { 
 
 	$title = $_POST['title']; 
@@ -31,10 +30,6 @@ if(isset($_POST['submitBtn'])) {
 
 	header('Location: login.php');
 }
-
-session_start();
-require_once('dbConfig.php');
-require_once('functions.php');
 
 if (isset($_POST['regBtn'])) {
 	$username = $_POST['username'];
