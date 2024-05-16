@@ -16,7 +16,7 @@ if(isset($_POST['submitBtn'])) {
 	$_SESSION['password'] = $password;
 
 
-	header('Location: index.php');
+	header('Location: login.php');
 }
 
 require_once('dbConfig.php'); 
@@ -31,7 +31,7 @@ if(isset($_POST['submitBtn'])) {
 
 	makeATask($conn, $title, $description); 
 
-	header('Location: index.php');
+	header('Location: login.php');
 }
 
 session_start();
@@ -52,7 +52,7 @@ if (isset($_POST['regBtn'])) {
 	else {
 
 		if(addUser($conn, $username, $password)) {
-			header('Location: index.php');
+			header('Location: login.php');
 		}
 
 		else {
